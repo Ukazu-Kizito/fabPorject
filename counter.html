@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <h1 id="counter"></h1>
+
+    <span id="date"></span>
+    <span id="time"></span>
+
+    <script>
+
+        const counter = document.getElementById('counter');
+
+        let count = 100;
+
+        function numCounter(){
+            counter.textContent = count++
+        }
+
+        
+        setInterval(numCounter, 1000)
+
+        // DATE
+
+        let date = document.getElementById('date')
+        let time = document.getElementById('time')
+
+        function dateCount(){
+            let myDate = new Date()
+            date.textContent = myDate.toLocaleTimeString()
+            time.textContent = myDate.toLocaleDateString()
+        }
+        
+        setInterval(dateCount, 1000)
+    </script>
+</body>
+</html>

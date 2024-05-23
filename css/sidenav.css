@@ -1,0 +1,21 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.sidenav{
+    background-color: black;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    overflow-x: scroll;
+    width: 0;
+    transition: 1s;
+}
+
+.sidenav a{
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+}

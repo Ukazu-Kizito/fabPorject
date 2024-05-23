@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" onclick="roller()">Roller</button>
+    <h1 id="display"></h1>
+
+    <script>
+        console.log(Math.random())
+        console.log(Math.floor(2.6))
+        console.log(Math.ceil(2.6))
+        console.log(Math.max(2,5,10))
+        console.log(Math.min(2,5,10))
+
+        console.log(Math.floor(Math.random() * 10) + 1)
+
+        const display = document.getElementById('display');
+
+        function roller(){
+            let random = Math.floor(Math.random() * 6) + 1
+            display.textContent = random;
+        }
+
+        
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

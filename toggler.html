@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #toggler{
+        background-color: black;
+        height: 20px;
+        width: 50px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .ball{
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        border-radius: 10px;
+        transform: scale(0.9);
+        transition: 1s;
+    }
+
+    #toggler.active .ball{
+        left: 30px;
+        background-color: rgb(95, 46, 46);
+    }
+
+    #toggler.active{
+        background-color: wheat;
+        transition: 1s;
+    }
+
+    body.active{
+        background-color: black;
+        transition: 1s;
+        color: white;
+    }
+</style>
+<body>
+    
+
+    <div id="toggler">
+        <span class="ball"></span>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut explicabo dicta, pariatur consequuntur in aut inventore aperiam architecto neque. Officiis ut quam aspernatur, consectetur facere quaerat laudantium ullam molestiae. Eum!</p>
+
+
+
+    <script>
+        let toggler = document.getElementById('toggler');
+        let body = document.querySelector('body')
+
+        toggler.addEventListener('click',function(){
+            toggler.classList.toggle('active')
+            body.classList.toggle('active')
+
+            if(!body.classList.contains('active')){
+                return localStorage.setItem('key', 'white')
+            }else{
+                return localStorage.setItem('key', 'active')
+            }
+        })
+
+        let getKey = localStorage.getItem('key');
+
+        if(getKey == 'active'){
+            toggler.classList.toggle('active')
+            body.classList.toggle('active')
+        }
+    </script>
+
+
+</body>
+</html>

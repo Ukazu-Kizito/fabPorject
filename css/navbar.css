@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.bg{
+    background-color: grey;
+    height: 60vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.navbar.active{
+    background-color: white;
+    color: black;
+}
+
+

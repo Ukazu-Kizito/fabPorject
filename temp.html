@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    form{
+        background-color: lightblue;
+        width: 400px;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    form div{
+        margin-top: 10px;
+    }
+    button{
+        background-color: grey;
+        border: none;
+        margin-top: 10px;
+        color: wheat;
+        padding: 5px 20px;
+    }
+
+</style>
+<body>
+    
+
+    <form action="">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="textbox">
+        <div>
+            <input type="radio" id="toKelvin" name="unit">
+            <label for="toKelvin">Celsius to Kelvin</label>
+        </div>
+        <div>
+            <input type="radio" id="toCelsius" name="unit">
+            <label for="toCelsius">Kelvin to Celsius</label>
+        </div>
+        <h3 id="display"></h3>
+        <button type="button" id="convert">Convert</button>
+    </form>
+
+
+    <script>
+        let textbox = document.getElementById('textbox');
+        let toKelvin = document.getElementById('toKelvin');
+        let toCelsius = document.getElementById('toCelsius');
+        let display = document.getElementById('display');
+        let convert = document.getElementById('convert');
+
+
+        convert.addEventListener('click', function(){
+            if(toKelvin.checked){
+                temp = textbox.value;
+                formula = temp - 273;
+                display.textContent = formula;
+            }
+        })
+    </script>
+</body>
+</html>
